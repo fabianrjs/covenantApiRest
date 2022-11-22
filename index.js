@@ -13,7 +13,7 @@ app.use(express.json())
  app.get('/usuarios', async(req,res)=>{
     const users = await pool.query('SELECT * FROM usuarios')
     res.send({
-        message: users
+        message: users.rows
     })
 })
 
